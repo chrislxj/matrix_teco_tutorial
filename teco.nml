@@ -1,0 +1,14 @@
+&control_pm
+file_Cinput     = 'input/Cinput_spinup.txt'
+file_param      = 'input/paramter.txt'
+file_init       = 'input/EcosystemC_spinup.txt'
+file_out        = 'output/EcosystemC_TECO_spinup_matrix.txt'
+nyr_sim         = 10000
+nyr_forc        = 10
+startyr         = 1
+dt              = 86400.       !1 day = 86400 seconds
+use_matrix      = .True.
+is_SASU_spinup  = .True.
+is_diagnostic   = .True.
+is_write_yearly = .True.  
+&end

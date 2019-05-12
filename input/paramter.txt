@@ -1,13 +1,14 @@
-0.45	0.55	0	0	0	0	0 !allocation fraction
-0.00176 0.000100104 0.021468 0.000845 0.008534 8.976e-005 3.09564e-006 !turnover rate per day
-0.7123
-0.2877
-1
-0.45
-0.275
-0.42
-0.45
-0.296
-0.275
-0.004
-0.03
+0.45	0.55	0	0	0	0	0   !NPP allocation fraction to foliage, wood, metabolic litter, structural litter, soil microbial, slow soil, passive soil 
+0.00176 0.000100104 0.021468 0.000845 0.008534 8.976e-005 3.09564e-006  !turnover rate per day of pools: foliage, wood, metabolic litter, structural litter, soil microbial, slow soil, passive soil 
+0.7123 ! C transfer coefficient (foliage to metabolic litter) 
+0.2877 ! C transfer coefficient (foliage to structural litter)
+1         ! C transfer coefficient (wood to structural litter)
+0.45    ! C transfer coefficient (metabolic litter to soil microbial)
+0.275  ! C transfer coefficient (structural litter to soil microbial)
+0.42    ! C transfer coefficient (slow soil to soil microbial)
+0.45    ! C transfer coefficient (passive soil to soil microbial)
+0.296  ! C transfer coefficient (soil microbial to slow soil)
+0.275  ! C transfer coefficient (structural litter to slow soil)
+0.004  ! C transfer coefficient (soil microbial to passive soil)
+0.03    ! C transfer coefficient (slow soil to passive soil)
+ 

@@ -1,14 +1,14 @@
 &control_pm
-file_Cinput     = 'input/Cinput_spinup.txt'
-file_param      = 'input/paramter.txt'
-file_init       = 'input/EcosystemC_spinup.txt'
-file_out        = 'output/EcosystemC_TECO_spinup_matrix.txt'
-nyr_sim         = 10000
-nyr_forc        = 10
-startyr         = 1
-dt              = 86400.       !1 day = 86400 seconds
-use_matrix      = .True.
-is_SASU_spinup  = .True.
-is_diagnostic   = .True.
-is_write_yearly = .True.  
+file_Cinput     = 'input/Cinput_spinup.txt'                      !Path of C input file
+file_param      = 'input/paramter.txt'                           !Path of parameter file
+file_init       = 'input/EcosystemC_spinup.txt'                  !Path of initial file
+file_out        = 'output/EcosystemC_TECO_spinup_conventional.txt'     !Path of output file
+nyr_sim         = 10000                                          !Number of year in simulation
+nyr_forc        = 10                                             !Number of year in forcing
+startyr         = 1                                              !Starting year
+dt              = 86400.                                         !Timestep(seconds), daily: 1 day = 86400 seconds 
+use_matrix      = .False.                                         !True: Turn on matrix representation, False: Conventional representation
+is_SASU_spinup  = .False.                                        !True: Turn on SASU spin up, False: Turn off SASU spin up
+is_diagnostic   = .False.                                        !True: Calculate diagnostic variables output, False: Not calculate diagnostic variables
+is_write_yearly = .True.                                         !True: Write output yearly, False: Write output daily
 &end

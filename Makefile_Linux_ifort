@@ -49,7 +49,7 @@ FC=ifort
 MKDIR=mkdir
 CP=cp
 CCADMIN=CCadmin
-LSRC=EcosystemCarbonFluxType.F90 EcosystemCarbonStateType.F90 ParameterType.F90 SimulationTimeType.F90 TECO_matrix_tutorial.F90 
+LSRC=EcosystemCarbonFluxType.F90 EcosystemCarbonStateType.F90 ParameterType.F90 SimulationTimeType.F90 TECO_matrix.F90 
 
 .SUFFIXES:
 .SUFFIXES: .F90 .o
@@ -61,12 +61,12 @@ LSRC=EcosystemCarbonFluxType.F90 EcosystemCarbonStateType.F90 ParameterType.F90 
 #build: 
 
 # all
-all: TECO_matrix_tutorial .all-post 
+all: TECO_matrix .all-post 
 
-TECO_matrix_tutorial: TECO_matrix_tutorial.o
+TECO_matrix: TECO_matrix.o
 	$(FC) -o $@ ${LSRC:.F90=.o}
 
-TECO_matrix_tutorial.o: TECO_matrix_tutorial.F90 EcosystemCarbonStateType.o EcosystemCarbonFluxType.o ParameterType.o SimulationTimeType.o 
+TECO_matrix.o: TECO_matrix.F90 EcosystemCarbonStateType.o EcosystemCarbonFluxType.o ParameterType.o SimulationTimeType.o 
 
 EcosystemCarbonStateType.o: EcosystemCarbonStateType.F90 ParameterType.o
 
